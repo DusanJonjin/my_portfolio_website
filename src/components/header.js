@@ -1,35 +1,40 @@
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import Navbar from './navbar'
+import { AllCentralStateContext } from '../context/allCentralStateContext';
+import '../styles/header.css'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = ({ siteTitle }) => {
+
+    const { 
+        darkTheme, 
+        handleThemeChange,
+        sideMenu,
+        showHideSideMenu,
+    } = useContext(AllCentralStateContext);
+
+    return (
+        <header className={`head ${darkTheme ? 'head-dark' : ''}`}>
+            <div className='logo-wrap'>
+                <Link to='/' className='home-link-logo'>
+                    <img src={require('../images/logo_DJ_black.png')} alt='logo' />
+                </Link>
+                <p>{siteTitle}</p>
+            </div>
+            <Navbar />
+            <div className='theme-toggle-bar-wrap'>
+                <div onClick={() => handleThemeChange()} 
+                     className={`theme-toggle-bar ${darkTheme ? 'bar-dark' : ''}`}
+                >               
+                </div>
+            </div>
+            <div className='hamburger-wrap' onClick={() => showHideSideMenu()}>
+                <div className={`open-close-menu ${darkTheme ? 'open-close-dark' : ''} ${sideMenu ? 'close' : ''}`}></div>
+            </div>
+        </header>
+    );
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
