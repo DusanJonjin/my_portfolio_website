@@ -1,0 +1,21 @@
+.not-found-wrap { 
+    height: 600px;
+    font-family: 'Tahoma', sans-serif;
+    color: rgb(90, 90, 90)
+}
+
+.not-found-wrap > h1,
+.not-found-wrap > p {
+    text-align: center;
+    margin: 0 15px;
+}
+
+.not-found-wrap > h1 {
+    padding: 4em 0 15px 0;
+}
+
+.not-found-wrap > p {
+    padding: 1em 0 0 0;
+    font-size: 21px;
+}
+

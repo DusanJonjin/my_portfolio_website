@@ -1,0 +1,50 @@
+.main-section {
+    font-family: 'Tahoma', sans-serif;
+    opacity: 0;
+    transition: .5s ease;
+    margin-bottom: 15px;
+}
+
+.main-section * {
+    box-sizing: border-box;
+}
+
+.unblur {
+    opacity: 1;
+}
+
+.main-section-h1 {
+    font-family: 'Sarpanch', sans-serif;
+    position: relative;
+    max-width: 250px;
+    font-size: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 25px 0 15px 0;
+    margin: 0 auto 10px auto;
+    color: rgb(54, 54, 66);
+    transition: .5s ease;
+}
+
+.main-section-h1::after {
+    content:'';
+    position: absolute;
+    width: 0px;
+    height: 5px;
+    bottom: 10%;
+    left: 0;
+    background-color: rgb(97, 94, 109);
+    transition: 1s ease;
+}
+
+.h1-permanent::after {
+    width: 100%
+}
+
+.h1-dark {
+    color: rgb(235, 235, 240);
+}
+
+.h1-dark::after {
+    background-color: rgb(245, 245, 250);
+}

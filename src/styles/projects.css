@@ -1,0 +1,122 @@
+.projects-ul {
+    padding: 0;
+    margin: 0 10px;
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-li {
+    padding: 0;
+    margin: 15px;
+    max-width: 100%;
+}
+
+.project-li > a {
+    text-decoration: none;
+}
+
+.project-figure {
+    margin: 0;
+    padding: 0;
+}
+
+.project-details {
+    font-size: 19px;
+    color: rgb(30, 30, 32);
+    text-align: center;
+    margin: 5px;
+    transition: .5s ease;
+}
+
+.project-details-dark {
+    color: rgb(240, 240, 242);
+}
+
+.project-name {
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.project-li:nth-child(even) .project-img-wrap{
+    border: 5px solid rgb(114, 57, 170);
+}
+
+.project-img-wrap {
+    width: 430px;
+    max-width: 100%;
+    border: 5px solid rgb(73, 27, 180);
+    border-radius: 7px;
+}
+
+.project-img-wrap img {
+    filter: brightness(.97);
+}
+
+.project-img-dark img {
+    filter: brightness(.88)
+}
+
+@media only screen and (min-width: 1200px) {
+    .projects-ul {
+        padding: 12px 0 10px 0;
+    }
+
+    .project-figure {
+        position: relative;
+    }
+
+    .project-figure::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom:0;
+        background-color: rgb(50, 50, 53);
+        border-radius: 7px;
+        opacity: .2;
+        transition: .7s ease;
+    }
+
+    .project-figure:hover::after {
+        height: 100%;
+        opacity: .77;
+        top: 0;
+    }
+
+    .project-figure > .project-details {
+        color: rgb(250, 250, 252);
+        font-size: 20px;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        transition: .4s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .project-figure:hover > .project-details {
+        height: 100%;
+    }
+
+    .project-figure > .project-details > .project-name {
+        color: rgb(255, 253, 136);
+        font-size: 22px;
+        display: block;
+        margin-bottom: 7px;
+        transform: translateY(100px);
+        transition: .7s;
+    }
+
+    .project-figure:hover > .project-details > .project-name {
+        transform: translateY(0);
+    }
+
+}

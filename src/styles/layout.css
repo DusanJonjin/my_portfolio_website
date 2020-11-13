@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+
+.whole-page-wrap {
+    background-color: rgb(244, 253, 255);
+    transition: .5s ease;
+}
+
+.whole-page-dark {
+    background: rgb(25, 25, 27);
+}
+
+.main {
+    margin: 0 15px;
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        margin: 0 10px;
+        background: url(../images/background-light.png);
+    }
+
+    body::after {
+        content: '';
+        background: url(../images/background-dark.jpg);
+    }
+
+    .whole-page-wrap {
+        max-width: 1450px;
+        margin: 20px auto 10px auto;
+        border-radius: 12px;
+        overflow: hidden;
+        transform: scale3d(.3, .3, .3) rotate(-360deg);
+    }
+
+    .whole-permanent {
+        transform: scale3d(1, 1, 1) rotate(0);
+    }
+}
