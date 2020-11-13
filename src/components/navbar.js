@@ -21,14 +21,10 @@ const Navbar = () => {
 
     const navLinksList = linkNamesArr.map((name, i) =>
         <li key={i}>
-            <Link className={`nav-link ${sideMenu ? 'nav-link-menu' : ''}`} 
-                  to={`/${name === 'profile' ? '' : name}`} 
-                  activeStyle={linkIsActive}
-                  state={{text:{
-                    first: 'Dušan Jonjin', 
-                    second:'the real', 
-                    third: "deal."
-                }}}
+            <Link 
+                className={`nav-link ${sideMenu ? 'nav-link-menu' : ''}`} 
+                to={`/${name === 'profile' ? '' : name}`} 
+                activeStyle={linkIsActive}
             >
                 <img src={require(`../images/${name}.png`)} alt={name} />
             </Link>
