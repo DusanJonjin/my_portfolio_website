@@ -36,7 +36,7 @@ const Contact = () => {
             }, 
             {
                 name: 'linkedin',
-                url: 'https://twitter.com/DJonjin'
+                url: 'https://www.linkedin.com/in/du%C5%A1an-jonjin-380b9a1bb/'
             }
         ]
     };

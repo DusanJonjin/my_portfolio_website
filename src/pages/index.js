@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import FluidImage from '../components/fluidImage';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
+import CV from '../files/Dusan_Jonjin_CV.pdf';
 import { Link } from 'gatsby';
 import '../styles/index.css';
 
@@ -108,7 +109,11 @@ const IndexPage = ({ location }) => {
                     </div>
                     <div className='profile-details-wrap'> 
                         <div className='profile-details-ul-btn-wrap'>
-                            <button className='dwnload-btn'>Download CV</button>
+                            <a href={CV} download='Dusan_CV' className='dwnload-btn-wrap'>
+                                <button className='dwnload-btn'>
+                                    Download CV
+                                </button>
+                            </a>
                             <ul className='profile-details-ul'>
                                 {myDetailsList()}
                             </ul>
