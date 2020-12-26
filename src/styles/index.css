@@ -114,11 +114,12 @@
 
 .profile-txt-question {
     color:rgb(30, 30, 31);
-    font-size: 24px;
+    font-size: 22px;
     font-family: 'Gill Sans MT', sans-serif;
     text-align: center;
     line-height: 1.2em;
     transition: .5s ease;
+    margin: 10px 6px;
 }
 
 .txt-question-dark {
@@ -169,7 +170,7 @@
 .final-old-saying {
     color: rgb(247, 246, 245);
     font-family: 'Calibri', sans-serif;
-    font-size: 27px;
+    font-size: 25px;
     font-weight: bold;
     line-height: 2em;
     padding: 2.5em 0;
@@ -187,7 +188,7 @@
 }
 
 .chase {
-    font-size: 30px;
+    font-size: 28px;
     display: block;
     line-height: 1.2em;
     transform: translateX(-250%);
@@ -218,7 +219,7 @@
 
     .profile-txt-question {
         margin: 5px 20px 10px 20px;
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .profile-final-txt-wrap {
@@ -226,11 +227,11 @@
     }
 
     .final-old-saying {
-        font-size: 25px;
+        font-size: 27px;
     }
 
     .chase {
-        font-size: 28px;
+        font-size: 30px;
     }
 }
 

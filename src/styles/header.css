@@ -112,7 +112,7 @@
     content: '';
     width: 34px;
     height: 4px;
-    top: 220%;
+    top: 250%;
     position: absolute;
 }
 
@@ -121,7 +121,7 @@
     width: 34px;
     height: 4px;
     position: absolute;
-    top: -220%;
+    top: -250%;
 }
 
 .open-close-menu, 
