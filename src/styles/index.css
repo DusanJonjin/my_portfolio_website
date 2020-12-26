@@ -218,10 +218,19 @@
 
     .profile-txt-question {
         margin: 5px 20px 10px 20px;
+        font-size: 22px;
     }
 
     .profile-final-txt-wrap {
         width: 90%;
+    }
+
+    .final-old-saying {
+        font-size: 25px;
+    }
+
+    .chase {
+        font-size: 28px;
     }
 }
 

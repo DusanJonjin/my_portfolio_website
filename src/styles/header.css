@@ -101,7 +101,7 @@
 
 .open-close-menu {
     width: 34px;
-    height: 5px;
+    height: 4px;
     position: relative;
     display: flex;
     margin: 0 auto;
@@ -111,7 +111,7 @@
 .open-close-menu::after {
     content: '';
     width: 34px;
-    height: 5px;
+    height: 4px;
     top: 220%;
     position: absolute;
 }
@@ -119,7 +119,7 @@
 .open-close-menu::before {
     content: '';
     width: 34px;
-    height: 5px;
+    height: 4px;
     position: absolute;
     top: -220%;
 }
@@ -127,7 +127,7 @@
 .open-close-menu, 
 .open-close-menu::after, 
 .open-close-menu::before {
-    background-color: rgb(223, 223, 224);
+    background-color: rgb(215, 215, 216);
     transition: .4s ease;
     border-radius: 5px;
 }
