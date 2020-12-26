@@ -59,8 +59,13 @@
     filter: brightness(.88)
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1350px) {
     .projects-ul {
+        width: 1400px;
+        max-width: 100%;
+        margin: 0 auto;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
         padding: 12px 0 10px 0;
     }
 
@@ -71,7 +76,7 @@
     .project-figure::after {
         content: '';
         position: absolute;
-        width: 100%;
+        width: 98%;
         height: 0;
         bottom:0;
         background-color: rgb(50, 50, 53);

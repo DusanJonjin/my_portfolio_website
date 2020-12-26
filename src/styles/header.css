@@ -13,7 +13,7 @@
 }
 
 .head-dark {
-    border-bottom: 1px solid rgb(80, 80, 80);
+    border-bottom: 1px solid rgb(55, 55, 55);
     background: rgb(46, 46, 49); 
 }
 
@@ -54,7 +54,7 @@
     height: 20px;
     background-color: rgb(28, 28, 28);
     border-radius: 15px;
-    border: 3px solid rgb(189, 198, 207);
+    /*border: 3px solid rgb(189, 198, 207);*/
     background-image: url('./../images/night.png');
     background-repeat: no-repeat;
     background-position: 16%;
@@ -100,7 +100,7 @@
 }
 
 .open-close-menu {
-    width: 32px;
+    width: 34px;
     height: 5px;
     position: relative;
     display: flex;
@@ -110,7 +110,7 @@
 
 .open-close-menu::after {
     content: '';
-    width: 32px;
+    width: 34px;
     height: 5px;
     top: 220%;
     position: absolute;
@@ -118,7 +118,7 @@
 
 .open-close-menu::before {
     content: '';
-    width: 32px;
+    width: 34px;
     height: 5px;
     position: absolute;
     top: -220%;
@@ -127,15 +127,9 @@
 .open-close-menu, 
 .open-close-menu::after, 
 .open-close-menu::before {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(223, 223, 224);
     transition: .4s ease;
     border-radius: 5px;
-}
-
-.open-close-dark,
-.open-close-dark::after,
-.open-close-dark::before {
-    background-color: rgb(210, 210, 210);
 }
 
 .close {
