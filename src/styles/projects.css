@@ -23,6 +23,7 @@
     border-radius: 7px;
     background-color:rgb(73, 27, 180);
     padding-bottom: 15px;
+    box-shadow: 0px 1px 8px 1px rgb(87, 87, 87);
 }
 
 .project-li:nth-child(even) .project-figure {
@@ -33,7 +34,7 @@
     font-size: 20px;
     color: rgb(235, 235, 237);
     text-align: center;
-    margin: 10px 5px 12px 5px;
+    margin: 10px 5px 15px 5px;
     transition: .5s ease;
 }
 
@@ -44,13 +45,13 @@
 }
 
 .project-li:nth-child(even) .project-img-wrap {
-    border: 5px solid rgb(114, 57, 170);
+    border: 7px solid rgb(114, 57, 170);
 }
 
 .project-img-wrap {
     width: 437px;
     max-width: 100%;
-    border: 5px solid rgb(73, 27, 180);
+    border: 7px solid rgb(73, 27, 180);
     border-radius: 7px 7px 0 0;
 }
 
@@ -67,6 +68,10 @@
     display: flex;
     justify-content: space-around;
     width: 98.5%;
+}
+
+.website-link, .github-link {
+    filter: brightness(1.1)
 }
 
 .github-link > img, .website-link > img {
@@ -89,7 +94,6 @@
 
     .project-figure {
         position: relative;
-        border-radius: 0;
         padding-bottom: 0;
         background-color: transparent;
     }
@@ -107,8 +111,13 @@
         font-size: 21px;
     }
 
+    .project-li:nth-child(even) .project-img-wrap {
+        border: 5px solid rgb(114, 57, 170);
+    }
+
     .project-img-wrap {
         border-radius: 7px 7px 7px 7px;
+        border: 5px solid rgb(73, 27, 180);
     }
 
     .project-figure::after {
@@ -205,12 +214,8 @@
         width: 50px;
     }
 
-    .github-link:hover {
-        filter: brightness(1.25);
-    }
-
-    .website-link:hover {
-        filter: brightness(1.25)
+    .github-link:hover, .website-link:hover {
+        filter: brightness(1.3);
     }
 
 }
