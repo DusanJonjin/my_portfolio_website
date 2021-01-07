@@ -66,13 +66,26 @@
 
 .process-img-wrap {
     margin: 10px auto 30px auto;
-    width: 0;
+    width: 180px;
     order: 1;
-    transform: rotate(-270deg);
-    transition: .8s ease-out;
+    transform: rotate(0deg);
+    animation: 1s rotation .5s backwards;
+}
+
+@keyframes rotation {
+    from {
+        width: 0;
+        transform: rotate(-270deg);
+    }
+
+    to {
+        width: 180px;
+        transform: rotate(0deg);
+    }
 }
 
 .process-permanent {
+    animation: none;
     transform: rotate(0deg);
     width: 180px;
 }
@@ -98,7 +111,8 @@
 
     .skills-list-one {
         order: 1;
-        transform: translateX(20%);
+        animation: 1s sliding1 .5s backwards; 
+        transform: translateX(0);
     }
 
     .process-img-wrap {
@@ -107,10 +121,32 @@
 
     .skills-list-two {
         order: 3;
-        transform: translateX(-20%);
+        animation: 1s sliding2 .5s backwards;
+        transform: translateX(0);
+    }
+
+    @keyframes sliding1 {
+        from {
+            transform: translateX(20%)
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes sliding2 {
+        from {
+            transform: translateX(-20%)
+        }
+
+        to {
+            transform: translateX(0);
+        }
     }
 
     .skills-list-permanent {
+        animation: none;
         transform: translateX(0);
     }
 

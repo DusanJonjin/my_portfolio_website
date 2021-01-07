@@ -31,9 +31,9 @@
     position: absolute;
     width: 0px;
     height: 5px;
-    bottom: 10%;
+    bottom: 12%;
     left: 0;
-    background-color: rgb(97, 94, 109);
+    background-color: rgb(88, 86, 95);
     transition: 1s ease;
 }
 

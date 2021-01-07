@@ -110,7 +110,7 @@ const IndexPage = ({ location }) => {
                     <div className='profile-details-wrap'> 
                         <div className='profile-details-ul-btn-wrap'>
                             <a href={CV} download='Dusan_CV' className='dwnload-btn-wrap'>
-                                <button className='dwnload-btn'>
+                                <button className={`dwnload-btn ${darkTheme ? 'dark-btn' : ''}`}>
                                     Download CV
                                 </button>
                             </a>
@@ -118,7 +118,9 @@ const IndexPage = ({ location }) => {
                                 {myDetailsList()}
                             </ul>
                             <Link to='/contact' className='page-link'>
-                                <button className='contact-btn'>Contact me</button>
+                                <button className={`contact-btn ${darkTheme ? 'dark-btn' : ''}`}>
+                                    Contact me
+                                </button>
                             </Link>
                         </div>    
                         <figure className='profile-details-img-wrap'>

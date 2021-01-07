@@ -9,7 +9,7 @@
 
 .project-li {
     padding: 0;
-    margin: 15px;
+    margin: 15px 15px 25px 15px;
     max-width: 100%;
 }
 
@@ -20,35 +20,38 @@
 .project-figure {
     margin: 0;
     padding: 0;
+    border-radius: 7px;
+    background-color:rgb(73, 27, 180);
+    padding-bottom: 15px;
+}
+
+.project-li:nth-child(even) .project-figure {
+    background-color: rgb(114, 57, 170);
 }
 
 .project-details {
-    font-size: 19px;
-    color: rgb(30, 30, 32);
+    font-size: 20px;
+    color: rgb(235, 235, 237);
     text-align: center;
-    margin: 5px;
+    margin: 10px 5px 12px 5px;
     transition: .5s ease;
-}
-
-.project-details-dark {
-    color: rgb(240, 240, 242);
 }
 
 .project-name {
     display: block;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: bold;
 }
 
-.project-li:nth-child(even) .project-img-wrap{
+.project-li:nth-child(even) .project-img-wrap {
     border: 5px solid rgb(114, 57, 170);
 }
 
 .project-img-wrap {
-    width: 430px;
+    width: 437px;
     max-width: 100%;
     border: 5px solid rgb(73, 27, 180);
-    border-radius: 7px;
+    border-radius: 7px 7px 0 0;
 }
 
 .project-img-wrap img {
@@ -59,36 +62,66 @@
     filter: brightness(.88)
 }
 
+.links-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 98.5%;
+}
+
+.github-link > img, .website-link > img {
+    width: 60px;
+}
+
 @media only screen and (min-width: 1350px) {
     .projects-ul {
         width: 1400px;
         max-width: 100%;
         margin: 0 auto;
-        display:grid;
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
         padding: 12px 0 10px 0;
     }
 
+    .project-li {
+        margin: 15px 15px 15px 15px;
+    }
+
     .project-figure {
         position: relative;
+        border-radius: 0;
+        padding-bottom: 0;
+        background-color: transparent;
+    }
+
+    .project-details {
+        font-size: 19px;
+        margin: 5px 5px 5px 5px;
+    }
+
+    .project-name {
+        font-size: 21px;
+    }
+
+    .project-img-wrap {
+        border-radius: 7px 7px 7px 7px;
     }
 
     .project-figure::after {
         content: '';
         position: absolute;
-        width: 98%;
+        width: 100%;
         height: 0;
         bottom:0;
         background-color: rgb(50, 50, 53);
         border-radius: 7px;
-        opacity: .2;
+        opacity: .15;
         transition: .7s ease;
     }
 
     .project-figure:hover::after {
         height: 100%;
-        opacity: .77;
-        top: 0;
+        opacity: .7;
     }
 
     .project-figure > .project-details {
@@ -97,7 +130,7 @@
         position: absolute;
         width: 100%;
         height: 0;
-        bottom: 0;
+        bottom: 7%;
         transition: .4s ease;
         display: flex;
         flex-direction: column;
@@ -105,6 +138,7 @@
         align-items: center;
         overflow: hidden;
         z-index: 1;
+        cursor: default;
     }
 
     .project-figure:hover > .project-details {
@@ -122,6 +156,57 @@
 
     .project-figure:hover > .project-details > .project-name {
         transform: translateY(0);
+    }
+
+    .links-wrapper {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 10%;
+        z-index: 2;
+        overflow: hidden;
+        transition: .5s ease;
+    }
+
+    .github-link, .website-link {
+        opacity: 0;
+        transition: .6s ease;
+    }
+
+    .github-link {
+        margin-right: 20px;
+    }
+
+    .website-link {
+        margin-left: 20px;
+    }
+
+    .project-figure:hover > .links-wrapper {
+        height: 50px;
+        bottom: 23%
+    }
+
+    .project-figure:hover .website-link {
+        opacity: 1;
+    }
+
+    .project-figure:hover .github-link {
+        opacity: 1;
+    }
+
+    .github-link > img, .website-link > img {
+        width: 50px;
+    }
+
+    .github-link:hover {
+        filter: brightness(1.25);
+    }
+
+    .website-link:hover {
+        filter: brightness(1.25)
     }
 
 }
