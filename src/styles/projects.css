@@ -94,6 +94,10 @@
         background-color: transparent;
     }
 
+    .project-li:nth-child(even) .project-figure {
+        background-color: transparent;
+    }
+
     .project-details {
         font-size: 19px;
         margin: 5px 5px 5px 5px;
