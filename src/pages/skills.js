@@ -60,11 +60,13 @@ const Skills = () => {
     const skillsList = mySkillsOneTwo => mySkillsOneTwo.map((skill, i) => 
             <li key={i}>
                 <span>&#10022; {skill.name}</span>
-                <img 
-                    className='skill-img'
-                    src={require(`../images/${skill.icon}.png`)} 
-                    alt={skill.name} 
-                />
+                <div className='skill-img-wrapper'>
+                    <img 
+                        className='skill-img'
+                        src={require(`../images/${skill.icon}.png`)} 
+                        alt={skill.name} 
+                    />
+                </div>
             </li>
     );
 

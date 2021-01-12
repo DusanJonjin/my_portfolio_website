@@ -33,7 +33,7 @@
     height: 5px;
     bottom: 12%;
     left: 0;
-    background-color: rgb(88, 86, 95);
+    background-color: rgb(83, 83, 89);
     transition: 1s ease;
 }
 
@@ -42,9 +42,9 @@
 }
 
 .h1-dark {
-    color: rgb(235, 235, 240);
+    color: rgb(230, 230, 233);
 }
 
 .h1-dark::after {
-    background-color: rgb(245, 245, 250);
+    background-color: rgb(233, 233, 236);
 }

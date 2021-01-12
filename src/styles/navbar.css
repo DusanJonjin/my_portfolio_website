@@ -70,7 +70,7 @@
     border-radius: 50%;
     transition: .7s ease;
     box-shadow: 0px 0px 4px 1px rgb(10, 18, 44);
-    background:rgb(85, 72, 206);
+    background:rgb(74, 72, 206);
 }
 
 .nav-point::after {

@@ -59,6 +59,13 @@
 .skills-list-two > li::after {
     background-image: linear-gradient(to right, rgb(109, 54, 163), rgb(149, 98, 245))
 }
+
+.skill-img-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: rgb(63, 40, 196);
+}
  
 .skill-img {
     width: 65px;
