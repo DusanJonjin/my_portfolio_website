@@ -80,7 +80,7 @@
 
 @keyframes bubble-up {
     10% {
-        transform: scale(.3);
+        transform: scale(.27);
     }
 
     60% {
