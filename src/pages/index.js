@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import FluidImage from '../components/fluidImage';
@@ -10,13 +10,13 @@ import '../styles/index.css';
 const IndexPage = ({ location }) => {
 
     /* const {state} = location; */
-    
-    const [unblur, setUnblur] = useState(false);
 
     const { 
         firstMount,
         handleFirstMount,
         darkTheme,
+        blurred,
+        unblurPage,
         sideMenu, 
         hideSideMenu, 
         traceNavPointPosition 
@@ -67,14 +67,14 @@ const IndexPage = ({ location }) => {
     useEffect(() => {
         if (sideMenu) hideSideMenu();
         traceNavPointPosition(linkPosition);
-        setUnblur(true);
+        unblurPage()
     // eslint-disable-next-line
     }, [])
 
     return (
         <Layout>
             <SEO title="Profile" />
-            <section className={`main-section ${unblur ? 'unblur' : ''}`}>
+            <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
                 <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>
                     Profile
                 </h1>

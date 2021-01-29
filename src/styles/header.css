@@ -1,6 +1,6 @@
 .head {
     background:rgb(71, 69, 197);
-    padding: 10px 0;
+    padding: 7px 0;
     border-bottom: 1px solid rgb(75, 63, 182);
     position: relative;
     display: flex;
@@ -34,15 +34,16 @@
 }
 
 .logo-wrap img {
-    width: 50px;
+    width: 54px;
     display: block;
 }
 
 .logo-wrap > p {
-    font-size: 20px;
-    color: rgb(243, 243, 243);
+    font-size: 21px;
+    color: rgb(231, 241, 247);
     padding: 0;
     margin: 0 0 0 10px;
+    font-weight: bold;
 }
 
 .theme-toggle-bar-wrap {
@@ -175,7 +176,8 @@
     .logo-wrap > p {
         padding-top: 0;
         font-size: 17px;
-        margin-left: 10px;;
+        font-weight: normal;
+        color: rgb(245, 252, 255);
     }
 
     .theme-toggle-bar-wrap {

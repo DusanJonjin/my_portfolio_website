@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import FluidImage from '../components/fluidImage';
@@ -9,16 +9,16 @@ import '../styles/projects.css';
 
 const Projects = () => {
 
-    const [unblur, setUnblur] = useState(false);
-
     const { 
         firstMount, 
         handleFirstMount,
         darkTheme,
+        blurred,
+        unblurPage,
         sideMenu,
         hideSideMenu,
         traceNavPointPosition
-     } = useContext(AllCentralStateContext);
+    } = useContext(AllCentralStateContext);
 
     const projectsArr = [
         {
@@ -108,14 +108,14 @@ const Projects = () => {
     useEffect(() => {
         if (sideMenu) hideSideMenu();
         traceNavPointPosition(linkPosition);
-        setUnblur(true);
+        unblurPage();
     // eslint-disable-next-line
     }, [])
 
     return (
         <Layout>
             <SEO title="Projects" />
-            <section className={`main-section ${unblur ? 'unblur' : ''}`}>
+            <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
                 <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>
                     Projects
                 </h1>

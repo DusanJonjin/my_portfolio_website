@@ -16,6 +16,8 @@ const AllCentralStateProvider = ({ children }) => {
 
     const [darkTheme, setDarkTheme] = useState(false);
 
+    const [blurred, setBlurred] = useState(true);
+
     const [sideMenu, setSideMenu] = useState(false);
 
     const [navPointPosition, setNavPointPosition] = useState('0deg');
@@ -30,6 +32,14 @@ const AllCentralStateProvider = ({ children }) => {
 
     const handleThemeChange = () => {
         setDarkTheme(prevDarkTheme => !prevDarkTheme)
+    };
+
+    const unblurPage = () => {
+        setBlurred(false);
+    }
+
+    const blurPage = () => {
+        setBlurred(true);
     };
 
     const showHideSideMenu = () => {
@@ -50,6 +60,9 @@ const AllCentralStateProvider = ({ children }) => {
                 {
                     darkTheme,
                     handleThemeChange,
+                    blurred,
+                    unblurPage,
+                    blurPage,
                     firstMount,
                     handleFirstMount, 
                     sideMenu, 

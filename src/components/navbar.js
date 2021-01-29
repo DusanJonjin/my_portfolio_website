@@ -7,6 +7,7 @@ const Navbar = () => {
 
     const { 
         darkTheme, 
+        blurPage,
         sideMenu,
         navPointPosition
     } = useContext(AllCentralStateContext);
@@ -20,7 +21,7 @@ const Navbar = () => {
     const linkNamesArr = ['profile', 'skills', 'projects', 'contact'];
 
     const navLinksList = linkNamesArr.map((name, i) =>
-        <li key={i}>
+        <li key={i} onClick={blurPage}>
             <Link 
                 className={`nav-link ${sideMenu ? 'nav-link-menu' : ''}`} 
                 to={`/${name === 'profile' ? '' : name}`} 
