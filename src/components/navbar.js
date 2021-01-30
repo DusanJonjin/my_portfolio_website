@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
 import '../styles/navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ currentPage }) => {
 
     const { 
         darkTheme, 
@@ -20,8 +20,8 @@ const Navbar = () => {
 
     const linkNamesArr = ['profile', 'skills', 'projects', 'contact'];
 
-    const navLinksList = linkNamesArr.map((name, i, arr) =>
-        <li key={i} onClick={name !== arr[i] && blurPage()}>
+    const navLinksList = linkNamesArr.map((name, i) =>
+        <li key={i} onClick={name !== currentPage && (() => blurPage())}>
             <Link 
                 className={`nav-link ${sideMenu ? 'nav-link-menu' : ''}`} 
                 to={`/${name === 'profile' ? '' : name}`} 

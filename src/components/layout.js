@@ -8,7 +8,7 @@ import backgroundDark from '../images/background-dark.jpg';
 import backgroundLight from '../images/background-light.png';
 import '../styles/layout.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, currentPage }) => {
 
     const { darkTheme, firstMount, handleFirstMount } = useContext(AllCentralStateContext);
 
@@ -39,7 +39,10 @@ const Layout = ({ children }) => {
 
     return (
         <div className={`whole-page-wrap ${!firstMount[pageName] ? 'whole-permanent' : ''} ${darkTheme ? 'whole-page-dark' : ''}`}>
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Header 
+                siteTitle={data.site.siteMetadata.title}
+                currentPage={currentPage} 
+            />
             <main>
                 {children}
             </main>

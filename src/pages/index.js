@@ -51,7 +51,7 @@ const IndexPage = ({ location }) => {
         return listArr
     };
 
-    const pageName = 'index';
+    const pageName = 'profile';
 
     const linkPosition = '46deg';
 
@@ -72,7 +72,7 @@ const IndexPage = ({ location }) => {
     }, [])
 
     return (
-        <Layout>
+        <Layout currentPage={pageName}>
             <SEO title="Profile" />
             <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
                 <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>

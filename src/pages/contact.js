@@ -81,7 +81,7 @@ const Contact = () => {
     }, [])
 
     return (
-        <Layout>
+        <Layout currentPage={pageName}>
             <SEO title="Contact" />
             <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
                 <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>

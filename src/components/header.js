@@ -5,7 +5,7 @@ import Navbar from './navbar'
 import { AllCentralStateContext } from '../context/allCentralStateContext';
 import '../styles/header.css'
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, currentPage }) => {
 
     const { 
         darkTheme, 
@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => {
                 </Link>
                 <p>{siteTitle}</p>
             </div>
-            <Navbar />
+            <Navbar currentPage={currentPage} />
             <div className='theme-toggle-bar-wrap'>
                 <div onClick={() => handleThemeChange()} 
                      className={`theme-toggle-bar ${darkTheme ? 'bar-dark' : ''}`}

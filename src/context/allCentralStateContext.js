@@ -7,7 +7,7 @@ const AllCentralStateProvider = ({ children }) => {
     const [firstMount, setFirstMount] = useState(
         {   
             layout: true,
-            index: true,
+            profile: true,
             skills: true,
             projects: true,
             contact: true
