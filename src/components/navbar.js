@@ -20,8 +20,8 @@ const Navbar = () => {
 
     const linkNamesArr = ['profile', 'skills', 'projects', 'contact'];
 
-    const navLinksList = linkNamesArr.map((name, i) =>
-        <li key={i} onClick={blurPage}>
+    const navLinksList = linkNamesArr.map((name, i, arr) =>
+        <li key={i} onClick={name !== arr[i] && blurPage()}>
             <Link 
                 className={`nav-link ${sideMenu ? 'nav-link-menu' : ''}`} 
                 to={`/${name === 'profile' ? '' : name}`} 

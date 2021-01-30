@@ -41,6 +41,7 @@
     justify-items: center;
     align-items: center;
     margin: 0;
+    user-select: none;
 }
 
 .nav-ul-wrapper img {
