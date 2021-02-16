@@ -30,7 +30,7 @@ const IndexPage = ({ location }) => {
 
     const myDetails = {
         name: 'Dušan Jonjin',
-        adress: 'Novi Kneževac',
+        address: 'Novi Kneževac',
         occupation: 'Front-end web developer'
     }
 
@@ -67,7 +67,7 @@ const IndexPage = ({ location }) => {
     useEffect(() => {
         if (sideMenu) hideSideMenu();
         traceNavPointPosition(linkPosition);
-        unblurPage()
+        unblurPage();
     // eslint-disable-next-line
     }, [])
 
