@@ -96,7 +96,7 @@ const Projects = () => {
 
     const pageName = 'projects'
 
-    const linkPosition = '312deg';
+    const linkPosition = '316deg';
 
     useEffect(() => {
         firstMount &&

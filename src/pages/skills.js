@@ -94,7 +94,7 @@ const Skills = () => {
 
     const pageName = 'skills';
 
-    const linkPosition = '132deg';
+    const linkPosition = '137deg';
 
     useEffect(() => {
         firstMount &&

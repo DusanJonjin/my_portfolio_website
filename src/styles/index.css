@@ -33,15 +33,12 @@
     margin: 3em 0 1.5em 0;
 }
 
-.dwnload-btn-wrap {
-    text-decoration: none;
-}
-
 .dwnload-btn,
 .contact-btn {
     font-family: 'Calibri', sans-serif;
     font-size: 22px;
     font-weight: bold;
+    text-decoration: none;
     color:white;
     border: 3px solid rgb(245, 117, 31);;
     border-radius: 4px;

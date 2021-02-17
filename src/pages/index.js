@@ -53,7 +53,7 @@ const IndexPage = ({ location }) => {
 
     const pageName = 'profile';
 
-    const linkPosition = '46deg';
+    const linkPosition = '50deg';
 
     useEffect(() => {
         firstMount &&
@@ -109,18 +109,14 @@ const IndexPage = ({ location }) => {
                     </div>
                     <div className='profile-details-wrap'> 
                         <div className='profile-details-ul-btn-wrap'>
-                            <a href={CV} download='Dusan_CV' className='dwnload-btn-wrap'>
-                                <button className={`dwnload-btn ${darkTheme ? 'dark-btn' : ''}`}>
-                                    Download CV
-                                </button>
+                            <a href={CV} download='Dusan_CV' className={`dwnload-btn ${darkTheme ? 'dark-btn' : ''}`}>                             
+                                Download CV
                             </a>
                             <ul className='profile-details-ul'>
                                 {myDetailsList()}
                             </ul>
-                            <Link to='/contact' className='page-link'>
-                                <button className={`contact-btn ${darkTheme ? 'dark-btn' : ''}`}>
-                                    Contact me
-                                </button>
+                            <Link to='/contact' className={`contact-btn ${darkTheme ? 'dark-btn' : ''}`}>
+                                Contact me
                             </Link>
                         </div>    
                         <figure className='profile-details-img-wrap'>
