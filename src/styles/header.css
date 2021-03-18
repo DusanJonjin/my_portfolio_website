@@ -1,7 +1,7 @@
 .head {
-    background:rgb(71, 69, 197);
+    background:rgb(69, 78, 197);
     padding: 7px 0;
-    border-bottom: 1px solid rgb(75, 63, 182);
+    border-bottom: 1px solid rgb(64, 72, 187);
     position: relative;
     display: flex;
     flex-direction: row;
@@ -13,7 +13,7 @@
 }
 
 .head-dark {
-    border-bottom: 1px solid rgb(55, 55, 55);
+    border-bottom: 1px solid rgb(50, 50, 53);
     background: rgb(46, 46, 49); 
 }
 
@@ -40,7 +40,7 @@
 
 .logo-wrap > p {
     font-size: 21px;
-    color: rgb(231, 241, 247);
+    color: rgb(243, 249, 252);
     padding: 0;
     margin: 0 0 0 10px;
     font-weight: bold;
@@ -55,7 +55,6 @@
     height: 20px;
     background-color: rgb(28, 28, 28);
     border-radius: 15px;
-    /*border: 3px solid rgb(189, 198, 207);*/
     background-image: url('./../images/night.png');
     background-repeat: no-repeat;
     background-position: 16%;
@@ -71,7 +70,7 @@
     height: 23px;
     border-radius: 50%;
     background: rgb(211, 215, 219);
-    box-shadow: 0px 0px 3px 5px rgb(96, 137, 252);
+    box-shadow: 0px 0px 3px 4px rgb(102, 142, 253);
     position: absolute;
     top: -9%;
     right: 2%;

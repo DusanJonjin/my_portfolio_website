@@ -1,5 +1,5 @@
 .contact-me {
-    border: 4px solid rgb(80, 30, 196);
+    border: 4px solid rgb(86, 35, 204);
     border-radius: 8px;
     margin: 20px 10px 0 10px;
     padding: 25px 10px;
@@ -64,7 +64,7 @@
 }
 
 .social-icon-img {
-    width: 95px;
+    width: 90px;
     max-width: 100%;
     cursor: pointer;
     transition: .3s ease;
@@ -126,7 +126,7 @@
     }
 
     .social-icon-img:hover {
-        transform: scale(1.1);
+        transform: scale(1.07);
     }
 
     .dusan-logo-img {

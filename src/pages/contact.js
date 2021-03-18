@@ -21,9 +21,9 @@ const Contact = () => {
     const socialIcons = {
         one: [
             {
-                name: 'facebook',
-                url: 'https://www.facebook.com/dusan.jonjin'
-            }, 
+                name: 'linkedin',
+                url: 'https://www.linkedin.com/in/du%C5%A1an-jonjin-380b9a1bb/'
+            },
             {
                 name: 'twitter',
                 url: 'https://twitter.com/DJonjin'
@@ -35,8 +35,8 @@ const Contact = () => {
                 url: 'https://github.com/DusanJonjin'
             }, 
             {
-                name: 'linkedin',
-                url: 'https://www.linkedin.com/in/du%C5%A1an-jonjin-380b9a1bb/'
+                name: 'facebook',
+                url: 'https://www.facebook.com/dusan.jonjin'
             }
         ]
     };

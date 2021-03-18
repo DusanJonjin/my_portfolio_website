@@ -20,13 +20,13 @@
 
 .skills-list-one {
     order: 2;
-    border: 5px solid rebeccapurple;
+    border: 5px solid rgb(106, 62, 189);
 
 }
 
 .skills-list-two {
     order: 3;
-    border: 5px solid rgb(80, 30, 196);
+    border: 5px solid rgb(95, 47, 228);
 }
 
 .skills-list-dark {

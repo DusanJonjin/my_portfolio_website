@@ -67,7 +67,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    width: 98.5%;
+    width: 85.5%;
 }
 
 .website-link, .github-link {
@@ -75,7 +75,7 @@
 }
 
 .github-link > img, .website-link > img {
-    width: 60px;
+    width: 55px;
 }
 
 @media only screen and (min-width: 1350px) {
@@ -112,12 +112,12 @@
     }
 
     .project-li:nth-child(even) .project-img-wrap {
-        border: 5px solid rgb(114, 57, 170);
+        border: 5px solid rgb(121, 59, 182);
     }
 
     .project-img-wrap {
         border-radius: 7px 7px 7px 7px;
-        border: 5px solid rgb(73, 27, 180);
+        border: 5px solid rgb(81, 33, 194);
     }
 
     .project-figure::after {
@@ -128,13 +128,13 @@
         bottom:0;
         background-color: rgb(50, 50, 53);
         border-radius: 7px;
-        opacity: .15;
+        opacity: .12;
         transition: .7s ease;
     }
 
     .project-figure:hover::after {
         height: 100%;
-        opacity: .7;
+        opacity: .65;
     }
 
     .project-figure > .project-details {
@@ -174,11 +174,12 @@
     .links-wrapper {
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         position: absolute;
-        width: 100%;
+        width: 45%;
         height: 0;
-        bottom: 10%;
+        bottom: 8%;
+        left: 28%;
         z-index: 2;
         overflow: hidden;
         transition: .5s ease;
@@ -189,12 +190,8 @@
         transition: .6s ease;
     }
 
-    .github-link {
-        margin-right: 20px;
-    }
-
-    .website-link {
-        margin-left: 20px;
+    .github-link > img, .website-link > img {
+        width: 60px;
     }
 
     .project-figure:hover > .links-wrapper {
