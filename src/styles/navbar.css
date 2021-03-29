@@ -135,7 +135,22 @@
     /* Class used when displaying side menu (nav) on mobile view*/
     .nav ul li {
         margin-bottom: 10px;
+    }
 
+    .nav ul li:nth-child(1) {
+        order: 1;
+    }
+
+    .nav ul li:nth-child(2) {
+        order: 2;
+    }
+
+    .nav ul li:nth-child(3) {
+        order: 4;
+    }
+
+    .nav ul li:nth-child(4) {
+        order: 3;
     }
 
     .nav ul li:nth-child(1)::before {
@@ -147,12 +162,13 @@
     }
 
     .nav ul li:nth-child(3)::before {
-        content: 'Projects';
+        content: 'Contact';
     }
 
     .nav ul li:nth-child(4)::before {
-        content: 'Contact';
+        content: 'Projects';
     }
+
 
     .nav ul li::before {
         font-weight: bold;
