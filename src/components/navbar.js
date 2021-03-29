@@ -18,7 +18,7 @@ const Navbar = ({ currentPage }) => {
         border: '1px solid rgb(20, 20, 20)'
     };
 
-    const linkNamesArr = ['profile', 'skills', 'projects', 'contact'];
+    const linkNamesArr = ['profile', 'skills', 'contact', 'projects'];
 
     const navLinksList = linkNamesArr.map((name, i) =>
         <li key={i} onClick={name !== currentPage && (() => blurPage())}>

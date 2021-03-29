@@ -40,10 +40,10 @@
     font-weight: bold;
     text-decoration: none;
     color:white;
-    border: 3px solid rgb(245, 117, 31);;
+    border: 3px solid var(--main-links-color);
     border-radius: 4px;
     padding: 15px 30px;
-    background:  rgb(245, 117, 31);
+    background: var(--main-links-color);
     cursor: pointer;
     transition: .5s ease;
 }
@@ -60,7 +60,7 @@
         -1px 1px 0 rgb(121, 59, 59),
         1px 1px 0 rgb(121, 59, 59); */
     background-color: white;
-    color:rgb(245, 117, 31);
+    color:var(--main-links-color);
 }
 
 .dark-btn:hover {

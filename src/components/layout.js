@@ -4,8 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import Footer from './footer';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
-import backgroundDark from '../images/background-dark.jpg';
-import backgroundLight from '../images/background-light.png';
+import backgroundDark from '../images/Endless-Constellation-dark.svg';
+import backgroundLight from '../images/Endless-Constellation-light.svg';
 import '../styles/layout.css';
 
 const Layout = ({ children, currentPage }) => {

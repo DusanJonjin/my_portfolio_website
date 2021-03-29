@@ -64,7 +64,7 @@ const Contact = () => {
 
     const pageName = 'contact'
 
-    const linkPosition = '230deg';
+    const linkPosition = '316deg';
 
     useEffect(() => {
         firstMount &&
