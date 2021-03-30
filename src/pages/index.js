@@ -1,10 +1,11 @@
 import React, { useEffect, useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
-import CV from '../files/Dusan_Jonjin_CV.pdf';
 import { Link } from 'gatsby';
+import CV from '../files/Dusan_Jonjin_CV.pdf';
 import '../styles/index.css';
 
 const IndexPage = ({ location }) => {
@@ -15,7 +16,6 @@ const IndexPage = ({ location }) => {
         firstMount,
         handleFirstMount,
         darkTheme,
-        blurred,
         unblurPage,
         sideMenu, 
         hideSideMenu, 
@@ -56,9 +56,9 @@ const IndexPage = ({ location }) => {
     const linkPosition = '50deg';
 
     useEffect(() => {
-        firstMount &&
+        firstMount[pageName] &&
         setTimeout(() => 
-            handleFirstMount(pageName), 2000
+            handleFirstMount(pageName), 1750
         )
     });
 
@@ -74,10 +74,7 @@ const IndexPage = ({ location }) => {
     return (
         <Layout currentPage={pageName}>
             <SEO title="Profile" />
-            <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
-                <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>
-                    Profile
-                </h1>
+            <MainSection pageName={pageName} >
                 <div className='profile-all-content-wrap'>
                     <div className='profile-text-wrap'>
                         <p className={`profile-txt-question ${darkTheme ? 'txt-question-dark' : ''}`}>
@@ -124,7 +121,7 @@ const IndexPage = ({ location }) => {
                         </figure>
                     </div>
                 </div>
-            </section>
+            </MainSection>
         </Layout>
     );
 }         

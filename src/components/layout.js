@@ -24,6 +24,10 @@ const Layout = ({ children, currentPage }) => {
 
     const pageName = 'layout';
 
+    const isIndexPage = currentPage === 'profile';
+
+    const layoutAnimation = isIndexPage && firstMount[pageName]
+
     useEffect(() => {
         const bodyStyle = document.body.style;
         if (darkTheme) bodyStyle.background = `url(${backgroundDark})`;
@@ -31,14 +35,14 @@ const Layout = ({ children, currentPage }) => {
     }, [darkTheme]);
 
     useEffect(() => {
-        firstMount &&
+        firstMount[pageName] &&
         setTimeout(() => 
             handleFirstMount(pageName), 1000
         )
     });
 
     return (
-        <div className={`whole-page-wrap ${!firstMount[pageName] ? 'whole-permanent' : ''} ${darkTheme ? 'whole-page-dark' : ''}`}>
+        <div className={`whole-page-wrap ${layoutAnimation ? '' : 'whole-permanent'} ${darkTheme ? 'whole-page-dark' : ''}`}>
             <Header 
                 siteTitle={data.site.siteMetadata.title}
                 currentPage={currentPage} 

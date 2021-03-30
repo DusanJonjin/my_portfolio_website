@@ -1,10 +1,11 @@
-import React, { useEffect, useContext } from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React, { useEffect, useContext } from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
-import SkillsWallpaper from '../components/skillsWallpaper'
-import { AllCentralStateContext } from '../context/allCentralStateContext'
-import '../styles/skills.css'
+import SkillsWallpaper from '../components/skillsWallpaper';
+import { AllCentralStateContext } from '../context/allCentralStateContext';
+import '../styles/skills.css';
 
 const Skills = () => {
  
@@ -12,7 +13,6 @@ const Skills = () => {
         firstMount, 
         handleFirstMount,
         darkTheme,
-        blurred,
         unblurPage,
         sideMenu,
         hideSideMenu,
@@ -23,7 +23,7 @@ const Skills = () => {
         name: 'process.png',
         maxWidth: 200,
         durationFadeIn: 3500
-    }
+    };
 
 
     const mySkills = {
@@ -97,7 +97,7 @@ const Skills = () => {
     const linkPosition = '137deg';
 
     useEffect(() => {
-        firstMount &&
+        firstMount[pageName] &&
         setTimeout(() => 
             handleFirstMount(pageName), 1500
         )
@@ -113,10 +113,7 @@ const Skills = () => {
     return (
         <Layout currentPage={pageName}>
             <SEO title="Skills" />
-            <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
-                <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>
-                    Skills
-                </h1>
+            <MainSection pageName={pageName} >
                 <div className='all-skills-wrap'>
                     <ul className={`skills-list-one ${!firstMount[pageName] ? 'skills-list-permanent' : ''} ${darkTheme ? 'skills-list-dark' : ''}`}>
                         {skillsList(mySkills.one)}
@@ -131,7 +128,7 @@ const Skills = () => {
                 <figure className='skills-wall-wrap'>
                     <SkillsWallpaper />
                 </figure>
-            </section>
+            </MainSection>
         </Layout>
     );
 }

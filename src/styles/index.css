@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Sarpanch:wght@800&display=swap);
-@import url(../styles/sharedClasses.css);
+@import url(../styles/mainSection.css);
 
 .profile-all-content-wrap {
     display: flex;

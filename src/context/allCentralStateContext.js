@@ -16,7 +16,7 @@ const AllCentralStateProvider = ({ children }) => {
 
     const [darkTheme, setDarkTheme] = useState(false);
 
-    const [blurred, setBlurred] = useState(true);
+    const [blurred, setBlurred] = useState(false);
 
     const [sideMenu, setSideMenu] = useState(false);
 

@@ -1,6 +1,6 @@
 .main-section {
     font-family: 'Tahoma', sans-serif;
-    opacity: 0;
+    opacity: 1;
     transition: .5s ease;
     margin-bottom: 15px;
 }
@@ -9,8 +9,8 @@
     box-sizing: border-box;
 }
 
-.unblur {
-    opacity: 1;
+.blur {
+    opacity: 0;
 }
 
 .main-section-h1 {

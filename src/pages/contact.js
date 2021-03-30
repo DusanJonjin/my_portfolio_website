@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import MainSection from '../components/mainSection';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
 import FluidImage from '../components/fluidImage';
 import '../styles/contact.css';
@@ -11,7 +12,6 @@ const Contact = () => {
         firstMount, 
         handleFirstMount,
         darkTheme,
-        blurred,
         unblurPage,
         sideMenu,
         hideSideMenu,
@@ -67,7 +67,7 @@ const Contact = () => {
     const linkPosition = '316deg';
 
     useEffect(() => {
-        firstMount &&
+        firstMount[pageName] &&
         setTimeout(() => 
             handleFirstMount(pageName), 1500
         )
@@ -83,10 +83,7 @@ const Contact = () => {
     return (
         <Layout currentPage={pageName}>
             <SEO title="Contact" />
-            <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
-                <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>
-                    Contact
-                </h1>
+            <MainSection pageName={pageName} >
                 <p className={`contact-me ${darkTheme ? 'contact-me-dark' : ''}`}>
                     If you like my work, and you can see me as a potential member of your team, or as a collaborator - contact me.
                 </p>
@@ -105,7 +102,7 @@ const Contact = () => {
                     <img src={require('../images/gmail.png')} alt='gmail-logo'/>
                     <a href='mailto:dusan.jonjin@gmail.com'>dusan.jonjin@gmail.com</a>
                 </address>
-            </section>
+            </MainSection>
         </Layout>
     );
 }

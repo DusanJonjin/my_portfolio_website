@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
 import githubImg from '../images/github-link.png';
@@ -13,7 +14,6 @@ const Projects = () => {
         firstMount, 
         handleFirstMount,
         darkTheme,
-        blurred,
         unblurPage,
         sideMenu,
         hideSideMenu,
@@ -57,19 +57,23 @@ const Projects = () => {
             github: 'https://github.com/DusanJonjin/hacker-news-app',
             technologies: 'React JS, Css'
         }
-    ] 
+    ];
+    
+    const pageName = 'projects';
+
+    const linkPosition = '230deg';
 
     const projectsList = projectsArr.map(project => {
         const { name, url, github, technologies } = project;
         const projectImage = {
             name: `${name.toLowerCase()}-img.jpg`,
             maxWidth: 800,
-            durationFadeIn: 3500
+            durationFadeIn: 3000
         };
         return (
             <li key={name} className='project-li'>
                 <figure className='project-figure'>
-                    <div className={`project-img-wrap ${darkTheme ? 'project-img-dark' : ''}`}>
+                    <div className={`project-img-wrap ${!firstMount[pageName] ? 'img-centered' : ''} ${darkTheme ? 'project-img-dark' : ''}`}>
                         <FluidImage fluidImageProps={projectImage} />
                     </div>
                     <figcaption className={`project-details`}>
@@ -88,18 +92,14 @@ const Projects = () => {
                         <a className='website-link' href={url} target='_blank' rel='noreferrer'>
                             <img src={websiteImg} alt='website-link' />
                         </a>
-                        </div>
+                    </div>
                 </figure>
             </li>
         )
     })
 
-    const pageName = 'projects'
-
-    const linkPosition = '230deg';
-
     useEffect(() => {
-        firstMount &&
+        firstMount[pageName] &&
         setTimeout(() => 
             handleFirstMount(pageName), 1500
         )
@@ -115,14 +115,11 @@ const Projects = () => {
     return (
         <Layout currentPage={pageName}>
             <SEO title="Projects" />
-            <section className={`main-section ${!blurred ? 'unblur' : ''}`}>
-                <h1 className={`main-section-h1 ${!firstMount[pageName] ? 'h1-permanent' : ''} ${darkTheme ? 'h1-dark' : ''}`}>
-                    Projects
-                </h1>
+            <MainSection pageName={pageName} >
                 <ul className='projects-ul'>
                     {projectsList}
                 </ul>
-            </section>
+            </MainSection>
         </Layout>
     );
 }
