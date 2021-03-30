@@ -35,7 +35,6 @@
     color: rgb(235, 235, 237);
     text-align: center;
     margin: 10px 5px 15px 5px;
-    transition: .5s ease;
 }
 
 .project-name {
@@ -53,7 +52,7 @@
     max-width: 100%;
     border: 7px solid rgb(73, 27, 180);
     border-radius: 7px 7px 0 0;
-    animation: 1s center-image .5s backwards;
+    animation: 1s center-image .6s backwards;
     opacity: 0;
     transform: translate(40%, 40%);
 }
