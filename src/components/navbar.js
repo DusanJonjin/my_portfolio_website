@@ -12,20 +12,13 @@ const Navbar = ({ currentPage }) => {
         navPointPosition
     } = useContext(AllCentralStateContext);
 
-    const linkIsActive = {
-        background: ' rgb(199, 237, 250)',
-        pointerEvents: 'none',
-        border: '1px solid rgb(20, 20, 20)'
-    };
-
     const linkNamesArr = ['profile', 'skills', 'contact', 'projects'];
 
     const navLinksList = linkNamesArr.map((name, i) =>
         <li key={i} onClick={name !== currentPage && (() => blurPage())}>
             <Link 
-                className={`nav-link ${sideMenu ? 'nav-link-menu' : ''}`} 
-                to={`/${name === 'profile' ? '' : name}`} 
-                activeStyle={linkIsActive}
+                className={`nav-link ${name === currentPage? 'nav-link-active' : ''} ${sideMenu ? 'nav-link-menu' : ''}`} 
+                to={`/${name === 'profile' ? '' : name}`}               
             >
                 <img src={require(`../images/${name}.png`)} alt={name} />
             </Link>

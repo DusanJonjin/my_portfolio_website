@@ -118,7 +118,7 @@
 
     .skills-list-one {
         order: 1;
-        animation: 1s sliding1 .5s backwards; 
+        animation: .8s sliding1 .5s backwards; 
         transform: translateX(0);
     }
 
@@ -128,7 +128,7 @@
 
     .skills-list-two {
         order: 3;
-        animation: 1s sliding2 .5s backwards;
+        animation: .8s sliding2 .5s backwards;
         transform: translateX(0);
     }
 
@@ -154,7 +154,6 @@
 
     .skills-list-permanent {
         animation: none;
-        transform: translateX(0);
     }
 
     .skills-list-one > li, .skills-list-two > li {

@@ -57,11 +57,14 @@
     transition: background .6s ease;
 }
 
+.nav-link-active {
+    background: rgb(199, 237, 250);
+    pointer-events: none;
+    border: 1px solid rgb(20, 20, 20);
+}
+
 .nav-link:hover {
     background: rgb(243, 192, 158);
-}
-.linkIsActive {
-    background: black;
 }
 
 .nav-point {

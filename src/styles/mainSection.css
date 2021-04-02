@@ -22,7 +22,7 @@
     text-align: center;
     padding: 25px 0 15px 0;
     margin: 0 auto 10px auto;
-    color: rgb(54, 54, 66);
+    color: rgb(76, 79, 105);
     transition: .5s ease;
 }
 
@@ -33,7 +33,7 @@
     height: 5px;
     bottom: 12%;
     left: 0;
-    background-color: rgb(83, 83, 89);
+    background-color: rgb(91, 95, 124);
     transition: 1s ease;
 }
 
@@ -42,9 +42,9 @@
 }
 
 .h1-dark {
-    color: rgb(230, 230, 233);
+    color: rgb(208, 211, 219);
 }
 
 .h1-dark::after {
-    background-color: rgb(233, 233, 236);
+    background-color: rgb(182, 187, 202);
 }

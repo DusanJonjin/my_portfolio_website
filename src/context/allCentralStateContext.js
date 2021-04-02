@@ -6,7 +6,6 @@ const AllCentralStateProvider = ({ children }) => {
 
     const [firstMount, setFirstMount] = useState(
         {   
-            layout: true,
             profile: true,
             skills: true,
             projects: true,
@@ -54,24 +53,24 @@ const AllCentralStateProvider = ({ children }) => {
         setNavPointPosition(deg)
     };
 
+    const value = {
+        darkTheme,
+        handleThemeChange,
+        blurred,
+        unblurPage,
+        blurPage,
+        firstMount,
+        handleFirstMount, 
+        sideMenu, 
+        showHideSideMenu,
+        hideSideMenu,
+        navPointPosition,
+        traceNavPointPosition
+    };
+
     return (
         <AllCentralStateContext.Provider
-            value={
-                {
-                    darkTheme,
-                    handleThemeChange,
-                    blurred,
-                    unblurPage,
-                    blurPage,
-                    firstMount,
-                    handleFirstMount, 
-                    sideMenu, 
-                    showHideSideMenu,
-                    hideSideMenu,
-                    navPointPosition,
-                    traceNavPointPosition
-                }
-            }
+            value={value}
         >
             {children}
         </AllCentralStateContext.Provider>

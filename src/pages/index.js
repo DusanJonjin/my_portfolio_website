@@ -58,7 +58,7 @@ const IndexPage = ({ location }) => {
     useEffect(() => {
         firstMount[pageName] &&
         setTimeout(() => 
-            handleFirstMount(pageName), 1750
+            handleFirstMount(pageName), 1500
         )
     });
 
@@ -70,6 +70,8 @@ const IndexPage = ({ location }) => {
         unblurPage();
     // eslint-disable-next-line
     }, [])
+
+    console.log(pageName)
 
     return (
         <Layout currentPage={pageName}>

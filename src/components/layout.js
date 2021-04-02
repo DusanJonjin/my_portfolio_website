@@ -4,13 +4,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import Footer from './footer';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
-import backgroundDark from '../images/Endless-Constellation-dark.svg';
-import backgroundLight from '../images/Endless-Constellation-light.svg';
 import '../styles/layout.css';
 
 const Layout = ({ children, currentPage }) => {
 
-    const { darkTheme, firstMount, handleFirstMount } = useContext(AllCentralStateContext);
+    const { darkTheme, firstMount } = useContext(AllCentralStateContext);
 
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
@@ -22,27 +20,18 @@ const Layout = ({ children, currentPage }) => {
         }
     `)
 
-    const pageName = 'layout';
-
     const isIndexPage = currentPage === 'profile';
 
-    const layoutAnimation = isIndexPage && firstMount[pageName]
+    const isSiteFirstLoad = Object.keys(firstMount).every(key => firstMount[key]);
+
+    const indexLayoutAnimated = isIndexPage && isSiteFirstLoad
 
     useEffect(() => {
-        const bodyStyle = document.body.style;
-        if (darkTheme) bodyStyle.background = `url(${backgroundDark})`;
-        else bodyStyle.background = `url(${backgroundLight})`;
+        document.body.classList.toggle('dark-body', darkTheme)
     }, [darkTheme]);
 
-    useEffect(() => {
-        firstMount[pageName] &&
-        setTimeout(() => 
-            handleFirstMount(pageName), 1000
-        )
-    });
-
     return (
-        <div className={`whole-page-wrap ${layoutAnimation ? '' : 'whole-permanent'} ${darkTheme ? 'whole-page-dark' : ''}`}>
+        <div className={`whole-page-wrap ${indexLayoutAnimated ? '' : 'whole-permanent'} ${darkTheme ? 'whole-page-dark' : ''}`}>
             <Header 
                 siteTitle={data.site.siteMetadata.title}
                 currentPage={currentPage} 

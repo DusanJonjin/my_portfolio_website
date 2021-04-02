@@ -25,20 +25,29 @@ body {
         background: url(../images/Endless-Constellation-light.svg);
     }
 
-    body::after {
-        content: '';
+    .dark-body {
         background: url(../images/Endless-Constellation-dark.svg);
     }
-
+    
     .whole-page-wrap {
         max-width: 1450px;
-        margin: 20px auto 10px auto;
+        margin: 25px auto;
         border-radius: 7px;
         overflow: hidden;
-        transform: scale3d(.3, .3, .3) rotate(-360deg);
+        animation: .6s rotate-main .7s backwards;
+        transform: scale3d(1, 1, 1) rotate(0);
+    }
+
+    @keyframes rotate-main {
+        from {
+            transform: scale3d(.3, .3, .3) rotate(-360deg);
+        }
+        to {
+            transform: scale3d(1, 1, 1) rotate(0);
+        }      
     }
 
     .whole-permanent {
-        transform: scale3d(1, 1, 1) rotate(0);
+        animation: none;
     }
 }

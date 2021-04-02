@@ -52,15 +52,15 @@
     max-width: 100%;
     border: 7px solid rgb(73, 27, 180);
     border-radius: 7px 7px 0 0;
-    animation: 1s center-image .6s backwards;
-    opacity: 0;
-    transform: translate(40%, 40%);
+    animation: .8s center-image .5s backwards;
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 @keyframes center-image {
     from {
         opacity: 0;
-        transform: translate(40%, 40%);
+        transform: translate(30%, 30%);
     }
     to {
         opacity: 1;
@@ -70,8 +70,6 @@
 
 .img-centered {
     animation: none;
-    opacity: 1;
-    transform: translate(0, 0);
 }
 
 .project-img-wrap img {
