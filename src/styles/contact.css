@@ -74,12 +74,16 @@
     order: 3;
     width: 300px;
     max-width: 100%;
-    transform: scale(.3);
+    transform: scale(1);
     animation: 1.1s bubble-up .4s backwards;
 }
 
 @keyframes bubble-up {
-    10% {
+    0% {
+        transform: scale(.3);
+    }
+
+    20% {
         transform: scale(.27);
     }
 
@@ -94,7 +98,6 @@
 
 .logo-permanent {
     animation: none;
-    transform: scale(1);
 }
 
 @media only screen and (min-width: 600px) {
