@@ -71,8 +71,6 @@ const IndexPage = ({ location }) => {
     // eslint-disable-next-line
     }, [])
 
-    console.log(pageName)
-
     return (
         <Layout currentPage={pageName}>
             <SEO title="Profile" />

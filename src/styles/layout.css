@@ -25,6 +25,10 @@ body {
         background: url(../images/Endless-Constellation-light.svg);
     }
 
+    .body::after {
+        background: url(../images/Endless-Constellation-dark.svg);
+    }
+
     .dark-body {
         background: url(../images/Endless-Constellation-dark.svg);
     }
