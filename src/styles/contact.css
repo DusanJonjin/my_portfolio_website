@@ -4,7 +4,8 @@
     margin: 20px 10px 0 10px;
     padding: 25px 10px;
     text-align: center;
-    color: rgb(45, 45, 47);
+    color: rgb(42, 42, 45);
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.35em;
@@ -14,10 +15,11 @@
 
 .contact-me-dark {
     background-color: rgb(33, 33, 35);
-    color:rgb(235, 235, 240)
+    color:rgb(220, 220, 225)
 }
 
 .mail-wrap {
+    font-family: 'Lato', sans-serif;
     display: flex;
     margin: 0 5px 35px 5px;
     padding: 2.5em 0;;

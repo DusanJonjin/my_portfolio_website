@@ -31,6 +31,7 @@
 }
 
 .project-details {
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     color: rgb(235, 235, 237);
     text-align: center;
@@ -38,9 +39,11 @@
 }
 
 .project-name {
+    font-family: 'Roboto', sans-serif;
     display: block;
     font-size: 22px;
     font-weight: bold;
+    letter-spacing: .06em;
 }
 
 .project-li:nth-child(even) .project-img-wrap {
@@ -195,7 +198,7 @@
         position: absolute;
         width: 45%;
         height: 0;
-        bottom: 8%;
+        bottom: 5%;
         left: 28%;
         z-index: 2;
         overflow: hidden;
@@ -213,7 +216,7 @@
 
     .project-figure:hover > .links-wrapper {
         height: 50px;
-        bottom: 23%
+        bottom: 21%
     }
 
     .project-figure:hover .website-link {
@@ -229,7 +232,7 @@
     }
 
     .github-link:hover, .website-link:hover {
-        filter: brightness(1.3);
+        filter: brightness(1.35);
     }
 
 }

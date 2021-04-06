@@ -1,15 +1,16 @@
 footer {
-    font-family: 'Calibri', sans-serif;
-    font-size: 18px;
-    color: rgb(100, 100, 103);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    letter-spacing: .04em;
+    color: rgb(110, 110, 113);
     text-align: center;
     border-top: 1px solid rgb(173, 173, 180);
     transition: .5s ease;
-    padding: 20px 0;
+    padding: 22px 0;
     margin: 0 15px;
 }
 
 .foot-dark {
-    color: rgb(147, 147, 150);
+    color: rgb(140, 140, 143);
     border-top: 1px solid rgb(100, 100, 103);
 }

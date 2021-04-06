@@ -29,11 +29,11 @@ const Skills = () => {
     const mySkills = {
         one: [
             {
-                name: 'Html',
+                name: 'HTML',
                 icon: 'html-icon'
             }, 
             {
-                name: 'Css',
+                name: 'CSS',
                 icon: 'css-icon'
             }, 
             {
@@ -43,7 +43,7 @@ const Skills = () => {
         ],
         two: [
             {
-                name: 'Javascript',
+                name: 'JavaScript',
                 icon: 'javascript-icon'
             }, 
             {

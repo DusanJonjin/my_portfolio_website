@@ -84,15 +84,16 @@ const IndexPage = ({ location }) => {
                         </p>
                         <div className={`profile-txt-answer-wrap ${darkTheme ? 'txt-answer-dark' : ''}`}>
                             <p className='profile-txt-answer'>
-                                Well, it's exactly the feeling, this thrill I get when I'm working
+                                Well, it's exactly the feeling, this thrill I get, when I'm working
                                 on some project or even some problem within it, and finish or solve
-                                it successfully. <br />This feeling keeps me motivated to work hard, be creative and never give up, no matter what...
+                                it successfully. This feeling keeps me motivated to work hard, be creative
+                                and never give up, no matter what it takes...
                             </p>    
                             <p className='profile-txt-conclusion'> 
                                 Coding gives me the ability to create stuff, flexibly and creatively
                                 solve logical problems in many different ways, learn and adopt cool 
                                 new techniques and technologies, thus to constantly improve my knowlegde - 
-                                and therefore I really enjoy doing it!
+                                and therefore I enjoy doing it!
                             </p>
                         </div>
                         <div className='profile-final-txt-wrap'>

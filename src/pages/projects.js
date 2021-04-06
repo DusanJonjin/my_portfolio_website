@@ -25,13 +25,13 @@ const Projects = () => {
             name: 'Stardust',
             url: 'http://www.stardust.eu5.org',
             github: '',
-            technologies: 'Html, Css, Javascript',
+            technologies: 'HTML, CSS, JavaScript',
         },
         {
             name: 'Amazing-shop',
             url: 'https://amazing-shop.netlify.app/',
             github: 'https://github.com/DusanJonjin/amazing-shop',
-            technologies: 'React JS, Css'
+            technologies: 'React JS, CSS'
         },
         {
             name: 'Weather-forecast',
@@ -43,7 +43,7 @@ const Projects = () => {
             name: 'Github-issues',
             url: 'https://github-issues-dj.netlify.app',
             github: 'https://github.com/DusanJonjin/github-issues',
-            technologies: 'React JS, Css'
+            technologies: 'React JS, CSS'
         },
         {
             name: 'Calculator',
@@ -55,7 +55,7 @@ const Projects = () => {
             name: 'Hacker-news',
             url: 'https://hacker-news-dj.netlify.app',
             github: 'https://github.com/DusanJonjin/hacker-news-app',
-            technologies: 'React JS, Css'
+            technologies: 'React JS, CSS'
         }
     ];
     

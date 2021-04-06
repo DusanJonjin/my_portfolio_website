@@ -137,6 +137,7 @@
 
     /* Class used when displaying side menu (nav) on mobile view*/
     .nav ul li {
+        font-family: 'Roboto', sans-serif;
         margin-bottom: 10px;
     }
 
