@@ -1,8 +1,9 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
+import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
 import githubImg from '../images/github-link.png';
 import websiteImg from '../images/website.png';
@@ -11,13 +12,9 @@ import '../styles/projects.css';
 const Projects = () => {
 
     const { 
-        firstMount, 
-        handleFirstMount,
         darkTheme,
-        unblurPage,
-        sideMenu,
-        hideSideMenu,
-        traceNavPointPosition
+        firstMount,
+        ...otherContext
     } = useContext(AllCentralStateContext);
 
     const projectsArr = [
@@ -98,19 +95,7 @@ const Projects = () => {
         )
     })
 
-    useEffect(() => {
-        firstMount[pageName] &&
-        setTimeout(() => 
-            handleFirstMount(pageName), 1500
-        )
-    });
-
-    useEffect(() => {
-        if (sideMenu) hideSideMenu();
-        traceNavPointPosition(linkPosition);
-        unblurPage();
-    // eslint-disable-next-line
-    }, [])
+    usePageMount(firstMount, otherContext, pageName, linkPosition);
 
     return (
         <Layout currentPage={pageName}>

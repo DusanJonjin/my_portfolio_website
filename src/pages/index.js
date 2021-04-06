@@ -1,8 +1,9 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
+import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
 import { Link } from 'gatsby';
 import CV from '../files/Dusan_Jonjin_CV.pdf';
@@ -13,13 +14,9 @@ const IndexPage = ({ location }) => {
     /* const {state} = location; */
 
     const { 
-        firstMount,
-        handleFirstMount,
         darkTheme,
-        unblurPage,
-        sideMenu, 
-        hideSideMenu, 
-        traceNavPointPosition 
+        firstMount,
+        ...otherContext
     } = useContext(AllCentralStateContext);
 
     const profileImage = {
@@ -55,21 +52,7 @@ const IndexPage = ({ location }) => {
 
     const linkPosition = '50deg';
 
-    useEffect(() => {
-        firstMount[pageName] &&
-        setTimeout(() => 
-            handleFirstMount(pageName), 1500
-        )
-    });
-
-    /*We need this so that mobile view nav menu can have slide effect, 
-      because on every page change component mounts and unmounts: */
-    useEffect(() => {
-        if (sideMenu) hideSideMenu();
-        traceNavPointPosition(linkPosition);
-        unblurPage();
-    // eslint-disable-next-line
-    }, [])
+    usePageMount(firstMount, otherContext, pageName, linkPosition);
 
     return (
         <Layout currentPage={pageName}>

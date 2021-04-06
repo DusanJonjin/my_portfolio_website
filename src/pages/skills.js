@@ -1,30 +1,26 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import SkillsWallpaper from '../components/skillsWallpaper';
+import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
 import '../styles/skills.css';
 
 const Skills = () => {
  
     const { 
-        firstMount, 
-        handleFirstMount,
         darkTheme,
-        unblurPage,
-        sideMenu,
-        hideSideMenu,
-        traceNavPointPosition
-     } = useContext(AllCentralStateContext);
+        firstMount,
+        ...otherContext
+    } = useContext(AllCentralStateContext);
 
     const processImg = {
         name: 'process.png',
         maxWidth: 200,
         durationFadeIn: 3500
     };
-
 
     const mySkills = {
         one: [
@@ -96,19 +92,7 @@ const Skills = () => {
 
     const linkPosition = '137deg';
 
-    useEffect(() => {
-        firstMount[pageName] &&
-        setTimeout(() => 
-            handleFirstMount(pageName), 1500
-        )
-    });
-
-    useEffect(() => {
-        if (sideMenu) hideSideMenu();
-        traceNavPointPosition(linkPosition);
-        unblurPage();
-    // eslint-disable-next-line
-    }, [])
+    usePageMount(firstMount, otherContext, pageName, linkPosition);
  
     return (
         <Layout currentPage={pageName}>
