@@ -280,8 +280,10 @@
 
     .profile-txt-answer,
     .profile-txt-conclusion {
-        font-size: 19px;
+        font-size: 18px;
+        line-height: 1.45em;
         flex: 1 1;
+        padding: 41px 20px;
         margin: 0 10px;
     }
 }
