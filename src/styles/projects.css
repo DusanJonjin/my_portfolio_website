@@ -198,11 +198,11 @@
         position: absolute;
         width: 45%;
         height: 0;
-        bottom: 5%;
+        bottom: 105%;
         left: 28%;
         z-index: 2;
         overflow: hidden;
-        transition: .5s ease;
+        opacity: 0;
     }
 
     .github-link, .website-link {
@@ -215,8 +215,10 @@
     }
 
     .project-figure:hover > .links-wrapper {
+        transition: .4s ease-out .4s;
         height: 50px;
-        bottom: 21%
+        bottom: 21%;
+        opacity: 1;
     }
 
     .project-figure:hover .website-link {
