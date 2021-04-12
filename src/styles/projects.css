@@ -198,11 +198,12 @@
         position: absolute;
         width: 45%;
         height: 0;
-        bottom: 105%;
+        bottom: 100%;
         left: 28%;
         z-index: 2;
         overflow: hidden;
         opacity: 0;
+        transition: .3s ease;
     }
 
     .github-link, .website-link {
