@@ -13,7 +13,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-preload-fonts`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -28,5 +27,6 @@ module.exports = {
         icon: `src/images/logo_DJ_black.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-preload-fonts`,
   ],
 }
