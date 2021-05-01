@@ -27,6 +27,12 @@ module.exports = {
         icon: `src/images/logo_DJ_black.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-preload-fonts`,
+    {
+        resolve: `gatsby-plugin-preload-fonts`,
+        options: {
+          crossOrigin: pathname =>
+            pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
+        },
+    },
   ],
 }
