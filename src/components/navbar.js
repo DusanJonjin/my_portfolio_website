@@ -15,12 +15,12 @@ const Navbar = ({ currentPage }) => {
     const linkNamesArr = ['profile', 'skills', 'contact', 'projects'];
 
     const navLinksList = linkNamesArr.map((name, i) =>
-        <li key={i} onClick={name !== currentPage && (() => blurPage())}>
+        <li key={i} onClick={name !== currentPage ? (() => blurPage()) : undefined}>
             <Link 
                 className={`nav-link ${name === currentPage? 'nav-link-active' : ''} ${sideMenu ? 'nav-link-menu' : ''}`} 
                 to={`/${name === 'profile' ? '' : name}`}               
             >
-                <img src={require(`../images/${name}.png`)} alt={name} />
+                <img src={require(`../images/${name}.png`).default} alt={name} />
             </Link>
         </li>
     );

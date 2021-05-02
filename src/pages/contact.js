@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import MainSection from '../components/mainSection';
 import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
@@ -52,7 +52,7 @@ const Contact = () => {
             rel='noreferrer'
         >
             <img 
-                src={require(`../images/${icon.name}.png`)} 
+                src={require(`../images/${icon.name}.png`).default} 
                 alt={`${icon.name}-icon`}
                 className='social-icon-img' 
             />
@@ -67,7 +67,7 @@ const Contact = () => {
 
     return (
         <Layout currentPage={pageName}>
-            <SEO title="Contact" />
+            <Seo title="Contact" />
             <MainSection pageName={pageName} >
                 <p className={`contact-me ${darkTheme ? 'contact-me-dark' : ''}`}>
                     If you like my work, and you can see me as a potential member of your team, or as a collaborator - contact me.
@@ -84,7 +84,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <address className='mail-wrap'>
-                    <img src={require('../images/gmail.png')} alt='gmail-logo'/>
+                    <img src={require('../images/gmail.png').default} alt='gmail-logo'/>
                     <a href='mailto:dusan.jonjin@gmail.com'>dusan.jonjin@gmail.com</a>
                 </address>
             </MainSection>

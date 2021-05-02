@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import SkillsWallpaper from '../components/skillsWallpaper';
@@ -59,7 +59,7 @@ const Skills = () => {
                 <div className='skill-img-wrapper'>
                     <img 
                         className='skill-img'
-                        src={require(`../images/${skill.icon}.png`)} 
+                        src={require(`../images/${skill.icon}.png`).default} 
                         alt={skill.name} 
                     />
                 </div>
@@ -96,7 +96,7 @@ const Skills = () => {
  
     return (
         <Layout currentPage={pageName}>
-            <SEO title="Skills" />
+            <Seo title="Skills" />
             <MainSection pageName={pageName} >
                 <div className='all-skills-wrap'>
                     <ul className={`skills-list-one ${!firstMount[pageName] ? 'skills-list-permanent' : ''} ${darkTheme ? 'skills-list-dark' : ''}`}>

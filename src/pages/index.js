@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import usePageMount from '../hooks/usePageMount';
@@ -56,7 +56,7 @@ const IndexPage = ({ location }) => {
 
     return (
         <Layout currentPage={pageName}>
-            <SEO title="Profile" />
+            <Seo title="Profile" />
             <MainSection pageName={pageName} >
                 <div className='profile-all-content-wrap'>
                     <div className='profile-text-wrap'>

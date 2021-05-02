@@ -28,10 +28,24 @@ module.exports = {
       },
     },
     {
-        resolve: `gatsby-plugin-preload-fonts`,
+        resolve: `gatsby-plugin-webfonts`,
         options: {
-          crossOrigin: pathname =>
-            pathname.match(/^\/elevated/) ? `use-credentials` : `anonymous`,
+            fonts: {
+                google: [
+                    {
+                        family: "Roboto",
+                        variants: ["400", "700"],
+                    },
+                    {
+                        family: "Lato",
+                        variants: ["400", "700"],
+                    },
+                    {
+                        family: "Sarpanch",
+                        variants: ["800"],
+                    },
+                ],
+            },
         },
     },
   ],

@@ -18,7 +18,7 @@ const Header = ({ siteTitle, currentPage }) => {
         <header className={`head ${darkTheme ? 'head-dark' : ''}`}>
             <div className='logo-wrap'>
                 <Link to='/' className='home-link-logo'>
-                    <img src={require('../images/logo_DJ_black.png')} alt='logo' />
+                    <img src={require('../images/logo_DJ_black.png').default} alt='logo' />
                 </Link>
                 <p>{siteTitle}</p>
             </div>

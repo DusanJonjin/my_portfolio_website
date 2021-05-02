@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import usePageMount from '../hooks/usePageMount';
@@ -99,7 +99,7 @@ const Projects = () => {
 
     return (
         <Layout currentPage={pageName}>
-            <SEO title="Projects" />
+            <Seo title="Projects" />
             <MainSection pageName={pageName} >
                 <ul className='projects-ul'>
                     {projectsList}

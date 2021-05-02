@@ -77,8 +77,10 @@ const AllCentralStateProvider = ({ children }) => {
     )
 }
 
-export default ({element}) => (
+const centralStateProvider = ({element}) => (
     <AllCentralStateProvider>
         {element}
     </AllCentralStateProvider>
 );
+
+export default centralStateProvider;
