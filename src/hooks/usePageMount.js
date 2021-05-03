@@ -10,16 +10,11 @@ function usePageMount (firstMount, otherContext, pageName, linkPosition) {
         unblurPage
     } = otherContext;
 
-    useEffect(() => {
-        firstMount[pageName] &&
-        setTimeout(() => 
-            handleFirstMount(pageName), 1500
-        )
-    });
-
     /*We need this so that mobile view nav menu can have slide effect, 
       because on every page change component mounts and unmounts: */
     useEffect(() => {
+        if (firstMount[pageName]) setTimeout(() => 
+            handleFirstMount(pageName), 1500);
         if (sideMenu) hideSideMenu();
         traceNavPointPosition(linkPosition);
         unblurPage();
