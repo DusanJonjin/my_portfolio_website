@@ -88,7 +88,7 @@
 }
 
 .details-li {
-    font-size: 24px;
+    font-size: 22px;
     color:rgb(72, 72, 76);
     padding: 20px 0;
     transition: .5s ease;
@@ -99,7 +99,7 @@
 }
 
 .details-span {
-    font-size: 26px;
+    font-size: 24px;
     color:rgb(29, 92, 165);
     letter-spacing: .12em;
     transition: .5s ease;
@@ -307,7 +307,7 @@
     }
 
     .profile-details-ul {
-        padding: 15px 15px;
+        padding: 25px 25px;
     }
 
     .profile-details-img-wrap {
