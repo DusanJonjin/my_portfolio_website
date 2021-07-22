@@ -11,7 +11,7 @@ function usePageMount (firstMount, otherContext, pageName, linkPosition) {
     } = otherContext;
 
     /*We need this so that mobile view nav menu can have slide effect, 
-      because on every page change component mounts and unmounts: */
+      because on every route change Page component mounts and unmounts: */
     useEffect(() => {
         if (firstMount[pageName]) setTimeout(() => 
             handleFirstMount(pageName), 1500);
