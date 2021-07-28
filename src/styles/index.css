@@ -40,16 +40,18 @@
     letter-spacing: .04em;
     text-decoration: none;
     color:white;
-    border: 3px solid var(--main-links-color);
+    border: 3px solid var(--main-btn-color);
     border-radius: 4px;
     padding: 15px 30px;
-    background: var(--main-links-color);
+    background: var(--main-btn-color);
     cursor: pointer;
     transition: .5s ease;
 }
 
 .dark-btn {
-    color: rgb(22, 22, 24)
+    color: rgb(22, 22, 24);
+    background: var(--dark-btn-color);
+    border: 3px solid var(--dark-btn-color);
 }
 
 .dwnload-btn:hover,
@@ -60,11 +62,12 @@
         -1px 1px 0 rgb(121, 59, 59),
         1px 1px 0 rgb(121, 59, 59); */
     background-color: white;
-    color:var(--main-links-color);
+    color:var(--main-btn-color);
 }
 
 .dark-btn:hover {
     background-color: rgb(23, 23, 25);
+    color: var(--dark-btn-color);
 }
 
 .dwnload-btn {

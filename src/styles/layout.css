@@ -1,5 +1,6 @@
 :root {
-    --main-links-color: rgb(245, 117, 31);
+    --main-btn-color: rgb(245, 117, 31);
+    --dark-btn-color: rgb(247, 131, 55);
 }
 
 body {
