@@ -50,7 +50,7 @@
 
 .nav-link {
     text-decoration: none;
-    background: rgb(247, 161, 105);
+    background: rgb(255, 173, 106);
     padding: 4px;
     border-radius: 10%;
     border: 1px solid rgb(35, 35, 35);
@@ -64,7 +64,7 @@
 }
 
 .nav-link:hover {
-    background: rgb(253, 198, 161);
+    background: rgb(255, 210, 174);
 }
 
 .nav-point {
