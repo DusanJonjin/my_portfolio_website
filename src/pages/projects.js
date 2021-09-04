@@ -50,8 +50,8 @@ const Projects = () => {
         },
         {
             name: 'Hacker-news',
-            url: 'https://hacker-news-dj.netlify.app',
-            github: 'https://github.com/DusanJonjin/hacker-news-app',
+            url: 'https://hackr-news-dj.netlify.app',
+            github: 'https://github.com/DusanJonjin/hacker-news-dj',
             technologies: 'React JS, CSS'
         }
     ];
