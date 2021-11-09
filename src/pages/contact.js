@@ -25,8 +25,8 @@ const Contact = () => {
     const socialNetImgLinks = num => {
         const oneHalf = Math.ceil(socialNetworks.length / 2);
         const socialNetsHalf = num === 1 
-            ? socialNetworks.slice(oneHalf)
-            : socialNetworks.slice(oneHalf, socialNetworks.length);
+            ? socialNetworks.slice(0, oneHalf)
+            : socialNetworks.slice(oneHalf);
         ;  
         return socialNetsHalf.map((icon, i) => 
             <a 

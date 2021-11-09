@@ -25,7 +25,7 @@ const Skills = () => {
 
     const skillsList = num => {
         const oneHalf = Math.ceil(mySkills.length / 2);
-        const skillsHalf = num === 1 ? mySkills.slice(oneHalf): mySkills.slice(oneHalf, mySkills.length);      
+        const skillsHalf = num === 1 ? mySkills.slice(0, oneHalf): mySkills.slice(oneHalf);      
         return skillsHalf.map((skill, i) => 
             <li key={i}>
                 <span>&#10022; {skill.name}</span>
