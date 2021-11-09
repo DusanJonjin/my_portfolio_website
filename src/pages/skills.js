@@ -6,6 +6,7 @@ import FluidImage from '../components/fluidImage';
 import SkillsWallpaper from '../components/skillsWallpaper';
 import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
+import { mySkills } from '../data/personalData';
 import '../styles/skills.css';
 
 const Skills = () => {
@@ -22,38 +23,10 @@ const Skills = () => {
         durationFadeIn: 3500
     };
 
-    const mySkills = {
-        one: [
-            {
-                name: 'HTML',
-                icon: 'html-icon'
-            }, 
-            {
-                name: 'CSS',
-                icon: 'css-icon'
-            }, 
-            {
-                name: 'Sass',
-                icon: 'sass-icon'
-            }
-        ],
-        two: [
-            {
-                name: 'JavaScript',
-                icon: 'javascript-icon'
-            }, 
-            {
-                name: 'React JS',
-                icon: 'react-icon'
-            },
-            {
-                name: 'Gatsby JS',
-                icon: 'gatsby-icon'
-            }
-        ]
-    };
-
-    const skillsList = mySkillsOneTwo => mySkillsOneTwo.map((skill, i) => 
+    const skillsList = num => {
+        const oneHalf = Math.ceil(mySkills.length / 2);
+        const skillsHalf = num === 1 ? mySkills.slice(oneHalf): mySkills.slice(oneHalf, mySkills.length);      
+        return skillsHalf.map((skill, i) => 
             <li key={i}>
                 <span>&#10022; {skill.name}</span>
                 <div className='skill-img-wrapper'>
@@ -64,29 +37,8 @@ const Skills = () => {
                     />
                 </div>
             </li>
-    );
-
-
-    /*const mySkillsList = () => {
-        let listArr = [];
-        for (const [key, value] of Object.entries(mySkills)) {
-            listArr = [
-                ...listArr, 
-                <article key={key}>
-                    <h2>
-                        {key}
-                    </h2>
-                    <ul>
-                        {value.map((v, i) => 
-                            <li key={i}>
-                                {v}
-                            </li>)}
-                    </ul>
-                </article>
-            ];
-        }
-        return listArr
-    };*/
+        );
+    };
 
     const pageName = 'skills';
 
@@ -100,13 +52,13 @@ const Skills = () => {
             <MainSection pageName={pageName} >
                 <div className='all-skills-wrap'>
                     <ul className={`skills-list-one ${!firstMount[pageName] ? 'skills-list-permanent' : ''} ${darkTheme ? 'skills-list-dark' : ''}`}>
-                        {skillsList(mySkills.one)}
+                        {skillsList(1)}
                     </ul>
                     <div className={`process-img-wrap ${!firstMount[pageName] ? 'process-permanent' : ''}`}>
                         <FluidImage fluidImageProps={processImg} />
                     </div>
                     <ul className={`skills-list-two ${!firstMount[pageName] ? 'skills-list-permanent' : ''} ${darkTheme ? 'skills-list-dark' : ''}`}>
-                        {skillsList(mySkills.two)}
+                        {skillsList(2)}
                     </ul>
                 </div>
                 <figure className='skills-wall-wrap'>

@@ -5,6 +5,7 @@ import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
+import { myDetails } from '../data/personalData';
 import { Link } from 'gatsby';
 import CV from '../files/Dusan_Jonjin_CV.pdf';
 import '../styles/index.css';
@@ -24,12 +25,6 @@ const IndexPage = ({ location }) => {
         maxWidth: 400,
         durationFadeIn: 3500
     };
-
-    const myDetails = {
-        name: 'Dušan Jonjin',
-        address: 'Novi Kneževac',
-        occupation: 'Front-end web developer'
-    }
 
     //iterate through myDetails object and return array of li elements
     const myDetailsList = () => {

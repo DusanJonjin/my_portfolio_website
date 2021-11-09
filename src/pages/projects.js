@@ -5,6 +5,7 @@ import MainSection from '../components/mainSection';
 import FluidImage from '../components/fluidImage';
 import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
+import { myProjects } from '../data/personalData';
 import githubImg from '../images/github-link.png';
 import websiteImg from '../images/website.png';
 import '../styles/projects.css';
@@ -16,51 +17,12 @@ const Projects = () => {
         firstMount,
         ...otherContext
     } = useContext(AllCentralStateContext);
-
-    const projectsArr = [
-        {
-            name: 'Stardust',
-            url: 'http://www.stardust.eu5.org',
-            github: '',
-            technologies: 'HTML, CSS, JavaScript',
-        },
-        {
-            name: 'Amazing-shop',
-            url: 'https://amazing-shop.netlify.app/',
-            github: 'https://github.com/DusanJonjin/amazing-shop',
-            technologies: 'React JS, CSS'
-        },
-        {
-            name: 'Weather-forecast',
-            url: 'https://weather-forecast-dj.netlify.app',
-            github: 'https://github.com/DusanJonjin/weather-forecast-ds',
-            technologies: 'React JS, Sass'
-        },
-        {
-            name: 'Github-issues',
-            url: 'https://github-issues-dj.netlify.app',
-            github: 'https://github.com/DusanJonjin/github-issues',
-            technologies: 'React JS, CSS'
-        },
-        {
-            name: 'Calculator',
-            url: 'https://my-calculator-dj.netlify.app',
-            github: 'https://github.com/DusanJonjin/my-calculator',
-            technologies: 'React JS, Sass'
-        },
-        {
-            name: 'Hacker-news',
-            url: 'https://hackr-news-dj.netlify.app',
-            github: 'https://github.com/DusanJonjin/hacker-news-dj',
-            technologies: 'React JS, CSS'
-        }
-    ];
     
     const pageName = 'projects';
 
     const linkPosition = '230deg';
 
-    const projectsList = projectsArr.map(project => {
+    const projectsList = myProjects.map(project => {
         const { name, url, github, technologies } = project;
         const projectImage = {
             name: `${name.toLowerCase()}-img.jpg`,

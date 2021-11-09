@@ -4,6 +4,7 @@ import Seo from "../components/seo";
 import MainSection from '../components/mainSection';
 import usePageMount from '../hooks/usePageMount';
 import { AllCentralStateContext } from '../context/allCentralStateContext';
+import { socialNetworks } from '../data/personalData';
 import FluidImage from '../components/fluidImage';
 import '../styles/contact.css';
 
@@ -15,49 +16,33 @@ const Contact = () => {
         ...otherContext
     } = useContext(AllCentralStateContext);
 
-    const socialIcons = {
-        one: [
-            {
-                name: 'linkedin',
-                url: 'https://www.linkedin.com/in/du%C5%A1an-jonjin-380b9a1bb/'
-            },
-            {
-                name: 'twitter',
-                url: 'https://twitter.com/DJonjin'
-            }
-        ],
-        two: [
-            {
-                name: 'github',
-                url: 'https://github.com/DusanJonjin'
-            }, 
-            {
-                name: 'facebook',
-                url: 'https://www.facebook.com/dusan.jonjin'
-            }
-        ]
-    };
-
     const bigLogoImg = {
         name: 'logo_DJ_big.png',
         maxWidth: 500,
         durationFadeIn: 500
-    }
+    };
 
-    const socialIconsImages = icons => (icons.map((icon, i) => 
-        <a 
-            key={i}
-            href={icon.url} 
-            target='_blank' 
-            rel='noreferrer'
-        >
-            <img 
-                src={require(`../images/${icon.name}.png`).default} 
-                alt={`${icon.name}-icon`}
-                className='social-icon-img' 
-            />
-        </a>
-    ));
+    const socialNetImgLinks = num => {
+        const oneHalf = Math.ceil(socialNetworks.length / 2);
+        const socialNetsHalf = num === 1 
+            ? socialNetworks.slice(oneHalf)
+            : socialNetworks.slice(oneHalf, socialNetworks.length);
+        ;  
+        return socialNetsHalf.map((icon, i) => 
+            <a 
+                key={i}
+                href={icon.url} 
+                target='_blank' 
+                rel='noreferrer'
+            >
+                <img 
+                    src={require(`../images/${icon.name}.png`).default} 
+                    alt={`${icon.name}-icon`}
+                    className='social-icon-img' 
+                />
+            </a> 
+        );
+    };
 
     const pageName = 'contact'
 
@@ -74,13 +59,13 @@ const Contact = () => {
                 </p>
                 <div className='icons-wrap'>
                     <div className='social-wrap-one'>
-                        {socialIconsImages(socialIcons.one)}
+                        {socialNetImgLinks(1)}
                     </div>
                     <div className={`dusan-logo-img ${!firstMount[pageName] ? 'logo-permanent' : ''}`}>
                         <FluidImage fluidImageProps={bigLogoImg} />
                     </div>
                     <div className='social-wrap-two'>
-                        {socialIconsImages(socialIcons.two)}
+                        {socialNetImgLinks(2)}
                     </div>
                 </div>
                 <address className='mail-wrap'>
