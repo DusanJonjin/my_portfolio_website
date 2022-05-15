@@ -64,8 +64,8 @@ export const myProjects = [
     },
     {
         name: 'Hacker-news',
-        url: 'https://hackr-news-dj.netlify.app',
-        github: 'https://github.com/DusanJonjin/hacker-news-dj',
+        url: 'https://hackrnews-dj.netlify.app',
+        github: 'https://github.com/DusanJonjin/Hackr-News-DJ',
         technologies: 'React JS, CSS'
     }
 ];
