@@ -46,7 +46,7 @@ export const myProjects = [
     },
     {
         name: 'Weather-forecast',
-        url: 'https://weather-forecast-dj.netlify.app',
+        url: 'https://weather-dj.netlify.app',
         github: 'https://github.com/DusanJonjin/weather-forecast-ds',
         technologies: 'React JS, Sass'
     },
